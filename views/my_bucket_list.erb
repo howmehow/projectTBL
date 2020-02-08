@@ -1,0 +1,9 @@
+<h1>My Travel Bucket List!</h1>
+<ol>
+  <% for city in @cities %>
+  <li>
+    <%= city.name() %>
+    <%= city.country_id %>
+  </li>
+<% end %>
+</ol>

@@ -41,16 +41,25 @@ country3.save()
 ##########################################
 city1 = City.new(
   "name" => "Edinburgh",
-  "country_id" => country1.id)
+   "visited" => false,
+   "wish_list" => true,
+   "country_id" => country1.id)
 city2 = City.new(
   "name" => "Warsaw",
-  "country_id" => country2.id)
+   "visited" => true,
+   "wish_list" => false,
+   "country_id" => country2.id)
 city3 = City.new(
   "name" => "Berlin",
-  "country_id" => country3.id)
+   "visited" => false,
+   "wish_list" => true,
+   "country_id" => country3.id)
 city4 = City.new(
   "name" => "Hamburg",
-  "country_id" => country3.id)
+   "visited" => true,
+   "wish_list" => false,
+   "country_id" => country3.id)
+
 city1.save()
 city2.save()
 city3.save()

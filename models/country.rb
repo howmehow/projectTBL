@@ -3,7 +3,7 @@ class Country
 
   attr_reader :id
   attr_accessor :name, :continent_id
-  
+
   def initialize(options)
     @id = options["id"].to_i() if options["id"].to_i()
     @name = options["name"]
@@ -32,5 +32,12 @@ class Country
   def self.delete_all()
     sql = "DELETE FROM countries"
     SqlRunner.run(sql)
+  end
+  def self.find(id)
+    sql = "SELECT * FROM countries WHERE id = $1"
+    values = [id]
+    result = SqlRunner.run(sql, values)
+    country = Country.new(result.first)
+    return country.name()
   end
 end

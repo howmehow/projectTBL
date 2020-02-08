@@ -24,5 +24,11 @@ attr_accessor :name
     sql = "DELETE FROM continents"
     SqlRunner.run(sql)
   end
-
+  def self.find(id)
+    sql = "SELECT * FROM continents WHERE id = $1"
+    values = [id]
+    result = SqlRunner.run(sql, values)
+    continent = Continent.new(result.first)
+    return continent
+  end
 end
