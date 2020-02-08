@@ -1,4 +1,6 @@
-require_relative("../models/*")
+require_relative("../models/city")
+require_relative("../models/continent")
+require_relative("../models/country")
 require("pry")
 
 City.delete_all()
@@ -53,3 +55,5 @@ city1.save()
 city2.save()
 city3.save()
 city4.save()
+binding.pry
+nil
