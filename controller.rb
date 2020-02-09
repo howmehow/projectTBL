@@ -15,9 +15,11 @@ get '/add-new' do
   erb(:add_new)
 end
 get '/visited' do
+  @cities = City.all()
   erb(:visited)
 end
 get '/my-bucket-list' do
   @cities = City.all()
+
   erb(:my_bucket_list)
 end

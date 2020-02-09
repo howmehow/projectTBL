@@ -8,9 +8,9 @@ attr_accessor :name, :visited, :wish_list, :country_id
   def initialize(options)
     @id = options["id"].to_i() if options["id"]
     @name = options["name"]
-    @visited = options["visited"]
-    @wish_list = options["wish_list"]
-    @country_id = options["country_id"]
+    @visited = options["visited"].to_i()
+    @wish_list = options["wish_list"].to_i()
+    @country_id = options["country_id"].to_i()
   end
 
   def save()
@@ -26,6 +26,22 @@ attr_accessor :name, :visited, :wish_list, :country_id
     values = [@name, @visited, @wish_list, @country_id, @id]
     SqlRunner.run(sql, values)
   end
+  def country()
+    sql = "SELECT * FROM countries WHERE id = $1"
+    values = [@country_id]
+    result = SqlRunner.run(sql,values)
+    country = Country.new(result.first)
+    return country.name
+  end
+  def continent()
+    sql = "SELECT * FROM countries WHERE id = $1"
+    values = [@country_id]
+    result = SqlRunner.run(sql,values)
+    country = Country.new(result.first)
+    continent = country.continent_country
+    return continent
+  end
+
   def self.all()
     sql = "SELECT * FROM cities"
     result = SqlRunner.run(sql)
@@ -43,4 +59,7 @@ attr_accessor :name, :visited, :wish_list, :country_id
     city = City.new(result.first)
     return city
   end
+  # def find country name
+  #
+  # end
 end

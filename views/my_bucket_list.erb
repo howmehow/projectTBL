@@ -1,9 +1,16 @@
-<h1>My Travel Bucket List!</h1>
-<ol>
-  <% for city in @cities %>
+<h1>Where I would love to go, my bucket list.</h1>
+<ul>
+  <% @cities.each do |city| if city.wish_list == 1%>
   <li>
-    <%= city.name() %>
-    <%= city.country_id %>
-  </li>
+  <p><%= city.name() %> in <%= city.country %>, <%= city.continent %>.</p>
+  <form action="/my-bucket-list<%=city.id %>/delete" method="post">
+    <input type="submit" value="Delete"/>
+  </form>
+  <form action="/my-bucket-list<%=city.id %>/edit" method="get">
+    <input type="submit" value="Edit"/>
+  </form>
+  <% end %></li>
+
+
 <% end %>
-</ol>
+</ul>

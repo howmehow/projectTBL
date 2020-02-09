@@ -14,7 +14,7 @@ CREATE TABLE countries (
 CREATE TABLE cities (
   id SERIAL PRIMARY KEY,
   name VARCHAR(255),
-  visited BOOLEAN,
-  wish_list BOOLEAN,
+  visited BIT(1),
+  wish_list BIT(1),
   country_id INT REFERENCES countries(id)
 );

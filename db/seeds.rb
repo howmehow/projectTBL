@@ -41,28 +41,52 @@ country3.save()
 ##########################################
 city1 = City.new(
   "name" => "Edinburgh",
-   "visited" => false,
-   "wish_list" => true,
+   "visited" => 0,
+   "wish_list" => 1,
    "country_id" => country1.id)
 city2 = City.new(
   "name" => "Warsaw",
-   "visited" => true,
-   "wish_list" => false,
+   "visited" => 1,
+   "wish_list" => 0,
    "country_id" => country2.id)
 city3 = City.new(
   "name" => "Berlin",
-   "visited" => false,
-   "wish_list" => true,
+   "visited" => 0,
+   "wish_list" => 1,
    "country_id" => country3.id)
 city4 = City.new(
   "name" => "Hamburg",
-   "visited" => true,
-   "wish_list" => false,
+   "visited" => 1,
+   "wish_list" => 0,
+   "country_id" => country3.id)
+city5 = City.new(
+  "name" => "Glasgow",
+   "visited" => 0,
+   "wish_list" => 1,
+   "country_id" => country1.id)
+city6 = City.new(
+  "name" => "Poznan",
+   "visited" => 1,
+   "wish_list" => 0,
+   "country_id" => country2.id)
+city7 = City.new(
+  "name" => "Cologne",
+   "visited" => 0,
+   "wish_list" => 1,
+   "country_id" => country3.id)
+city8 = City.new(
+  "name" => "Dusseldorf",
+   "visited" => 1,
+   "wish_list" => 0,
    "country_id" => country3.id)
 
 city1.save()
 city2.save()
 city3.save()
 city4.save()
+city5.save()
+city6.save()
+city7.save()
+city8.save()
 binding.pry
 nil
