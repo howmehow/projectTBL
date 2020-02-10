@@ -11,7 +11,7 @@ get '/' do
 end
 
 get '/add-new' do
-
+  @continents = Continent.all()
   erb(:add_new)
 end
 get '/visited' do
