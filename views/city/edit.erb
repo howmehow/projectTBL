@@ -1,0 +1,31 @@
+<form method="post" action="/city/<%= @city.id %>">
+
+  <label for="select-continent">Select continent </label>
+    <select id="select-continent" name="continent_id">
+      <% @continents.each do |continent| %>
+      <option <%= "selected" if @city.continent_id == continent.id %>
+      value=<%= continent.id %>> <%= continent.name %></option>
+      <% end %>
+    </select>
+<br>
+  <label for="select-country">Select country </label>
+    <select id="select-country" name="country_id">
+      <% @countries.each do |country| %>
+      <option <%= "selected" if @city.country_id == country.id  %>
+         value=<%= country.id %>><%= country.name %></option>
+      <% end %>
+      </select>
+      <a href="/country/new"> Or add new one!</a>
+<br>
+
+  <label for="type_city">Type in city </label>
+    <input id="type_city" type="text" name="name" value="<%= @city.name %>"/>
+<br>
+
+  <label for="visited">Visited already? </label>
+    <input id="visited" type="radio" name="visited" value="True">Yes</input>
+    <input id="visited" type="radio" name="visited" value="False">No</input>
+<br>
+    <input type="submit" value="Edit the city"/>
+
+</form>

@@ -1,11 +1,12 @@
 
 <% @cities.each do |city|%>
-<p><%= city.name() %> in
-  <%= city.country() %>,<br>
-  visited?:<%= city.visited %>,<br>
-  continent:<%= city.continent.name() %></p>
-    <br>
-    id:<%=city.id %>
+  <p>
+  <%= city.name() %> in
+    <%= city.country() %>, <br>
+      visited? :<%= city.visited %> <br>
+        continent :<%= city.continent.name() %></p><br>
+          id:<%=city.id %>
+
     <form action="/city/<%= city.id %>/delete" method="post">
         <input type="submit" value="Delete"/>
         </form>

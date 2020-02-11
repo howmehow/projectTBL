@@ -28,6 +28,8 @@ post '/city' do #create
 end
 
 get '/city/:id/edit' do #edit
+  @continents = Continent.all()
+  @countries = Country.all()
   @city = City.find(params[:id])
   erb(:"city/edit")
 end
