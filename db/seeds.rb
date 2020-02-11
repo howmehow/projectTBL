@@ -1,7 +1,7 @@
-require_relative("../models/city")
-require_relative("../models/continent")
-require_relative("../models/country")
-require("pry")
+require_relative("../models/city.rb")
+require_relative("../models/continent.rb")
+require_relative("../models/country.rb")
+require("pry-byebug")
 
 City.delete_all()
 Country.delete_all()
@@ -27,58 +27,55 @@ continent5.save()
 continent6.save()
 #########################################
 country1 = Country.new(
-  "name" => "Scotland",
-  "continent_id" => continent2.id)
+  "name" => "Scotland")
 country2 = Country.new(
-  "name" => "Poland",
-  "continent_id" => continent2.id)
+  "name" => "Poland")
 country3 = Country.new(
-  "name" => "Germany",
-  "continent_id" => continent2.id)
+  "name" => "Germany")
 country1.save()
 country2.save()
 country3.save()
 ##########################################
 city1 = City.new(
   "name" => "Edinburgh",
-   "visited" => 0,
-   "wish_list" => 1,
-   "country_id" => country1.id)
+   "visited" => TRUE,
+   "country_id" => country1.id,
+   "continent_id" => continent2.id)
 city2 = City.new(
-  "name" => "Warsaw",
-   "visited" => 1,
-   "wish_list" => 0,
-   "country_id" => country2.id)
+   "name" => "Warsaw",
+   "visited" => TRUE,
+   "country_id" => country2.id,
+   "continent_id" => continent2.id)
 city3 = City.new(
   "name" => "Berlin",
-   "visited" => 0,
-   "wish_list" => 1,
-   "country_id" => country3.id)
+   "visited" => FALSE,
+   "country_id" => country3.id,
+   "continent_id" => continent2.id)
 city4 = City.new(
   "name" => "Hamburg",
-   "visited" => 1,
-   "wish_list" => 0,
-   "country_id" => country3.id)
+   "visited" => TRUE,
+   "country_id" => country3.id,
+   "continent_id" => continent2.id)
 city5 = City.new(
   "name" => "Glasgow",
-   "visited" => 0,
-   "wish_list" => 1,
-   "country_id" => country1.id)
+   "visited" => FALSE,
+   "country_id" => country1.id,
+   "continent_id" => continent2.id)
 city6 = City.new(
   "name" => "Poznan",
-   "visited" => 1,
-   "wish_list" => 0,
-   "country_id" => country2.id)
+   "visited" => TRUE,
+   "country_id" => country2.id,
+   "continent_id" => continent2.id)
 city7 = City.new(
   "name" => "Cologne",
-   "visited" => 0,
-   "wish_list" => 1,
-   "country_id" => country3.id)
+   "visited" => FALSE,
+   "country_id" => country3.id,
+   "continent_id" => continent2.id)
 city8 = City.new(
   "name" => "Dusseldorf",
-   "visited" => 1,
-   "wish_list" => 0,
-   "country_id" => country3.id)
+   "visited" => TRUE,
+   "country_id" => country3.id,
+   "continent_id" => continent2.id)
 
 city1.save()
 city2.save()

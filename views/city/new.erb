@@ -1,0 +1,28 @@
+<h1>Wanna add new city?</h1>
+
+<form method="post" action="/city">
+
+  <label for="select-continent">Select continent </label>
+    <select id="select-continent" name="continent_id">
+    <% @continents.each do |continent| %> <option value=<%= continent.id %>> <%= continent.name %></option>
+    <% end %>
+    </select>
+<br>
+  <label for="select-country">Select country </label>
+    <select id="select-country" name="country_id">
+    <% @countries.each do |country| %><option value=<%= country.id %>><%= country.name %></option>
+    <% end %>
+    </select>
+<br>
+
+
+  <label for="type_city">Type in city </label>
+    <input id="type_city" type="text" name="name"/><br>
+
+  <label for="visited">Visited? </label>
+    <input id="visited" type="radio" name="visited" value="True">Yes</input>
+    <input id="visited" type="radio" name="visited" value="False">No</input>
+
+  <input type="submit" value="Add new city"/>
+
+</form>
