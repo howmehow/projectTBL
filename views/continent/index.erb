@@ -1,0 +1,13 @@
+<% @continents.each do |continent| %>
+<p>
+  Name: <%= continent.name() %>
+  ID: <%= continent.id() %>
+  <br>
+</p>
+  <form action="/continent/<%= continent.id() %>/delete" method="post">
+    <input type="submit" value="Delete"/>
+  </form>
+  <form action="/continent/<%= continent.id() %>/edit" method="get">
+    <input type="submit" value="Edit"/>
+  </form>
+  <% end %>

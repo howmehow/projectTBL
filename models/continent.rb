@@ -14,6 +14,16 @@ attr_accessor :name
     result = SqlRunner.run(sql, values)
     @id = result.first["id"].to_i()
   end
+  def update()
+    sql = "UPDATE continents SET name = $1 WHERE id = $2"
+    values = [@name, @id]
+    SqlRunner.run(sql,values)
+  end
+  def delete()
+    sql = "DELETE FROM continents WHERE id = $1"
+    values = [@id]
+    SqlRunner(sql, values)
+  end
   def self.all()
     sql = "SELECT * FROM continents"
     result = SqlRunner.run(sql)
