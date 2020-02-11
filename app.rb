@@ -3,7 +3,11 @@ require("sinatra/contrib/all")
 require_relative('./controllers/city_controller')
 require_relative('./controllers/country_controller')
 require_relative('./controllers/continent_controller')
+require_relative('./models/city.rb')
+require_relative('./models/country.rb')
+require_relative('./models/continent.rb')
 
-get '/' do
+get '/' do #index
+  @cities = City.all()
   erb(:index)
 end
