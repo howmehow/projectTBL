@@ -9,10 +9,20 @@ require_relative('./models/continent.rb')
 
 get '/' do #index
   @cities = City.all()
+  @continents = Continent.all()
+  @countries = Country.all()
   erb(:index)
 end
 
 get '/visited' do #index of wish list
   @cities = City.all()
   erb(:visited)
+end
+
+get '/europe' do
+  erb(:europe)
+end
+
+get '/southamerica' do
+  erb(:southamerica)
 end

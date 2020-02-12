@@ -1,34 +1,92 @@
-<h1>Where I would love to go, my bucket list.</h1>
-  <ul>
-    <% @cities.each do |city| if city.wish_list == 1%>
-    <li>
-    <p><%= city.name() %> in <%= city.country %>, <%= city.continent %>.</p>
-    <form action="/<%=city.id %>/delete" method="post">
-      <input type="submit" value="Delete"/>
-    </form>
-    <form action="/<%=city.id %>/edit" method="get">
-      <input type="submit" value="Edit"/>
-    </form>
-<!-- have to add mark as visited, so send to another page?, and then auto submittion when checkbox marked!-->
+<div class = "car-image">
+<div class = "main-text">
+
+<h1>What you have already seen!</h1><h3></h3>
+
+  <% @cities.each do |city| if city.visited == 't' %>
+  <% if city.continent_id ==1 %>
+  <p><%= city.name() %> in
+    <%= city.country() %> -
+      <%= city.continent.name() %></p>
+      <% end %>
+      <% end %>
+      <% end %>
+  <% @cities.each do |city| if city.visited == 't' %>
+  <% if city.continent_id ==2 %>
+  <p><%= city.name() %> in
+    <%= city.country() %> -
+      <%= city.continent.name() %></p>
+      <% end %>
+      <% end %>
+      <% end %>
+  <% @cities.each do |city| if city.visited == 't' %>
+  <% if city.continent_id ==3 %>
+  <p><%= city.name() %> in
+    <%= city.country() %> -
+      <%= city.continent.name() %></p>
+      <% end %>
+      <% end %>
+      <% end %>
+  <% @cities.each do |city| if city.visited == 't' %>
+  <% if city.continent_id ==4 %>
+  <p><%= city.name() %> in
+    <%= city.country() %> -
+      <%= city.continent.name() %></p>
+      <% end %>
+      <% end %>
+      <% end %>
+  <% @cities.each do |city| if city.visited == 't' %>
+  <% if city.continent_id ==5 %>
+  <p><%= city.name() %> in
+    <%= city.country() %> -
+      <%= city.continent.name() %></p>
+      <% end %>
+      <% end %>
+      <% end %>
+  <% @cities.each do |city| if city.visited == 't' %>
+  <% if city.continent_id ==6 %>
+  <p><%= city.name() %> in
+    <%= city.country() %> -
+      <%= city.continent.name() %></p>
+      <% end %>
+      <% end %>
+      <% end %>
+  <% @cities.each do |city| if city.visited == 't' %>
+  <% if city.continent_id ==7 %>
+  <p><%= city.name() %> in
+    <%= city.country() %> -
+      <%= city.continent.name() %></p>
+      <% end %>
+      <% end %>
+      <% end %>
+
+</div>
+</div>
+#####################################################
 
 
-        <form name="visited" id="visited" action="" method="get">
-            <input type ="checkbox" name="Visited" value = "1" onclick="this.form.submit();">Visited!</input>
-              </form>
-
-    <% end %></li>
-
-
-  <% end %>
-  </ul>
 
 
 
 
-index
-  <% @countries.each do |country|%>
-  <p><%= country.name() %> </p>
-  <% end %>
-  <% @continents.each do |continent|%>
-  <p><%= continent.name() %> </p>
-  <% end %>
+
+
+
+
+
+
+<div class = "car-image">
+<div class = "main-text">
+
+<h1>What you have already seen!</h1><h3></h3>
+<ol>
+  <% @cities.each do |city| if city.visited == 't' %>
+  <li class="visit">
+  <%= city.name() %> in
+    <%= city.country() %> -
+      <%= city.continent.name() %><br>
+      <% end %></li><br>
+      <% end %><br>
+</ol>
+</div>
+</div>

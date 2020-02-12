@@ -24,7 +24,7 @@ end
 post '/city' do #create
   @city = City.new(params)
   @city.save()
-  redirect to "/city"
+  redirect to "/"
 end
 
 get '/city/:id/edit' do #edit
@@ -36,11 +36,11 @@ end
 
 post '/city/:id' do #update
   City.new(params).update
-  redirect to "/city"
+  redirect to "/"
 end
 
 post '/city/:id/delete' do #delete
   city = City.find(params[:id])
   city.delete()
-  redirect to "/city"
+  redirect to "/visited"
 end

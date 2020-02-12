@@ -21,7 +21,7 @@ end
 post '/country' do #create
   @countries = Country.new(params)
   @countries.save()
-  redirect "/country"
+  redirect "/city/new"
 end
 
 get '/country/:id/edit' do #edit
@@ -31,11 +31,11 @@ end
 
 post '/country/:id' do #update
   Country.new(params).update
-  redirect "/country"
+  redirect "/city/new"
 end
 
 post '/country/:id/delete' do #delete
   country = Country.find(params[:id])
   country.delete()
-  redirect "/country"
+  redirect "/city/new"
 end

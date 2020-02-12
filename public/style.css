@@ -1,0 +1,125 @@
+ul {
+  font-family:futura;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #76A54C;
+}
+.visit {
+  float:none;
+  color:black;
+}
+li {
+  float: left;
+}
+a{
+  color:green;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #415B2A;
+}
+
+
+
+.main-text {
+  margin-left:20%;
+  margin-right:20%;
+  padding:1px 16px;
+  height:1000px;
+  font-family:futura;
+  color: black;
+
+
+}
+.city-new {
+  margin-left:25%;
+  margin-right:25%;
+  padding:1px 16px;
+  height:1000px;
+  font-family:futura;
+  color: black;
+  line-height: 30px;
+}
+
+h1 {
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 50px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 60px; color:black; text-align: center; margin-top:10%; text-shadow: 3px 3px #FFFFFF;}
+h3 {
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 18px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; margin-top:30%;}
+h5 {
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 18px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; margin-top:20%;}
+h2 {
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 18px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px;}
+p {
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px;
+ }
+.main-image {
+  background-image: url("map.jpg");
+  background-color: #cccccc;
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+}
+.car-image {
+  background-image: url("carmap.jpg");
+  background-color: #cccccc;
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.south-image {
+  background-image: url("south.jpg");
+  background-color: #cccccc;
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.europe-image {
+  background-image: url("europe.jpg");
+  background-color: #cccccc;
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.button {
+  background-color: #81BC4D; /* Green */
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 8px;
+  margin: 2px 2px;
+  cursor: pointer;
+  padding: 5px 12px;
+}
+
+.button1 {
+  background-color: #81BC4D; /* Green */
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 2px 2px;
+  cursor: pointer;
+  padding: 5px 12px;
+}

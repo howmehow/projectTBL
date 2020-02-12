@@ -1,9 +1,23 @@
+
+<div class="main-image">
+<div class="main-text">
 <h1>Welcome to your Travel Bucket List</h1>
-<h3>Here is what is currently on your to visit list.</h3>
+
+<h5>Your travel bucket list:</h5>
 <% @cities.each do |city| if city.visited == 'f' %>
 <p>
 <%= city.name() %> in
   <%= city.country() %> -
     <%= city.continent.name() %></p>
-    <% end %>
-    <% end %>
+    <form name="visited" id="visited" action="/city/<%= city.id %>" method="post">
+        <input type="hidden" id="continent" type="text" name="continent_id" value="<%= city.continent_id %>"/>
+        <input type="hidden" id="country" type="text" name="country_id" value="<%= city.country_id %>"/>
+        <input type="hidden" id="city" type="text" name="name"
+        value="<%= city.name %>"/>
+        <input type ="hidden" id="visited" name="visited" value = 't' /><input type="submit" value="Visited!"/>
+
+    </form>
+<% end %>
+<% end %>
+</div>
+</div>

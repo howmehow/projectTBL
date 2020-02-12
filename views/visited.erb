@@ -1,14 +1,21 @@
-<h1>What you have already seen!</h1>
+<div class = "car-image">
+<div class = "main-text">
+
+<h1>What you have already seen!</h1><h5></h5>
 <ol>
-  <% @cities.each do |city| if city.visited == 'f' %>
-  <p>
-  <%= city.name() %> in
+  <% @cities.each do |city| if city.visited == 't' %>
+  <li class="visit">
+  <h2><%= city.name() %> </h2>in
     <%= city.country() %> -
-      <%= city.continent.name() %></p>
+      <%= city.continent.name() %><br>
       <% end %>
-      <% end %>
+      <form action="/city/<%= city.id %>/delete" method="post">
+          <input class="button" type="submit" value="Delete"/>
+          </form><form action="/city/<%= city.id %>/edit" method="get">
+          <input class="button" type="submit" value="Edit"/>
+          </form>
+    </li><br>
+      <% end %><br>
 </ol>
-
-
-<h4>Wow</h4>
-<h4>Well Done!</h4>
+</div>
+</div>

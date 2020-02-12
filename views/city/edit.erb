@@ -23,8 +23,13 @@
 <br>
 
   <label for="visited">Visited already? </label>
-    <input id="visited" type="radio" name="visited" value="True">Yes</input>
+  <% if @city.visited == "t" %>
+    <input id="visited" type="radio" name="visited" value="True" checked="checked">Yes</input>
     <input id="visited" type="radio" name="visited" value="False">No</input>
+    <% else %>
+    <input id="visited" type="radio" name="visited" value="True">Yes</input>
+    <input id="visited" type="radio" name="visited" value="False" checked="checked">No</input>
+    <% end %>
 <br>
     <input type="submit" value="Edit the city"/>
 

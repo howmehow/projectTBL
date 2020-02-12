@@ -20,7 +20,7 @@ end
 post '/continent' do #create
   @continent = Continent.new(params)
   @continent.save()
-  redirect to "/continent"
+  redirect to "/city/new"
 end
 
 get '/continent/:id/edit' do #edit
@@ -30,11 +30,11 @@ end
 
 post '/continent/:id' do #update
   Continent.new(params).update
-  redirect to "/continent"
+  redirect to "/city/new"
 end
 
 post '/continent/:id/delete' do #delete
   continent = Continent.find(params[:id])
   continent.delete()
-  redirect to "/continent"
+  redirect to "/city/new"
 end
