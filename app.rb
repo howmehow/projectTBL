@@ -11,3 +11,8 @@ get '/' do #index
   @cities = City.all()
   erb(:index)
 end
+
+get '/visited' do #index of wish list
+  @cities = City.all()
+  erb(:visited)
+end

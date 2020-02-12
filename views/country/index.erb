@@ -1,12 +1,13 @@
 <% @countries.each do |country| %>
 <p>
-    <%= country.name() %>
-      id: <%= country.id() %></p>
+  <%= country.name() %>
+    id: <%= country.id() %>
+</p>
 <br>
   <form action="/country/<%= country.id() %>/delete" method="post">
     <input type="submit" value="Delete"/>
   </form>
   <form action="/country/<%= country.id() %>/edit" method="get">
     <input type="submit" value="Edit"/>
-    </form>
+  </form>
 <%end %>

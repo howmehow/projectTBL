@@ -1,12 +1,14 @@
-<h1>What I've already seen!</h1>
+<h1>What you have already seen!</h1>
 <ol>
-  <% @cities.each do |city| if city.visited == 1%>
-  <li>
-  <p><%= city.name() %> in <%= city.country() %>, <%= city.continent %></p>
-  </li>
-<% end %>
-<% end %>
+  <% @cities.each do |city| if city.visited == 'f' %>
+  <p>
+  <%= city.name() %> in
+    <%= city.country() %> -
+      <%= city.continent.name() %></p>
+      <% end %>
+      <% end %>
 </ol>
 
 
-<h1>wow</h1>
+<h4>Wow</h4>
+<h4>Well Done!</h4>

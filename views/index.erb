@@ -1,9 +1,9 @@
 <h1>Welcome to your Travel Bucket List</h1>
-
-<% @cities.each do |city| if city.visited == 't' %>
+<h3>Here is what is currently on your to visit list.</h3>
+<% @cities.each do |city| if city.visited == 'f' %>
 <p>
 <%= city.name() %> in
-<%= city.country() %>, 
-<%= city.continent.name() %></p>
-        <% end %>
-        <% end %>
+  <%= city.country() %> -
+    <%= city.continent.name() %></p>
+    <% end %>
+    <% end %>

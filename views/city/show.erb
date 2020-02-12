@@ -1,8 +1,8 @@
-<p><%= @city.name %></p>
-<p><%= @city.id %></p>
-<p><%= @city.visited %></p>
-<p><%= @city.country_id %></p>
-<p><%= @city.continent_id %></p>
+<p><%= @city.name %>
+<%= @city.id %>
+<%= @city.visited %>
+<%= @city.country_id %>
+<%= @city.continent_id %></p>
 
 <form action="/city/<%= @city.id %>/delete" method="post">
     <input type="submit" value="Delete">
