@@ -8,9 +8,9 @@ Country.delete_all()
 Continent.delete_all()
 #########################################
 continent1 = Continent.new(
-  "name" => "Asia")
-continent2 = Continent.new(
   "name" => "Europe")
+continent2 = Continent.new(
+  "name" => "Asia")
 continent3 = Continent.new(
   "name" => "Africa")
 continent4 = Continent.new(
@@ -19,12 +19,15 @@ continent5 = Continent.new(
   "name" => "South America")
 continent6 = Continent.new(
   "name" => "Australia")
+continent7 = Continent.new(
+  "name" => "Antarctica")
 continent1.save()
 continent2.save()
 continent3.save()
 continent4.save()
 continent5.save()
 continent6.save()
+continent7.save()
 #########################################
 country1 = Country.new(
   "name" => "Scotland")

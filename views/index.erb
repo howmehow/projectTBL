@@ -5,10 +5,10 @@
 
 <h5>Your travel bucket list:</h5>
 <% @cities.each do |city| if city.visited == 'f' %>
-<p>
-<%= city.name() %> in
+
+<h2><%= city.name() %> </h2>in
   <%= city.country() %> -
-    <%= city.continent.name() %></p>
+    <%= city.continent.name() %>
     <form name="visited" id="visited" action="/city/<%= city.id %>" method="post">
         <input type="hidden" id="continent" type="text" name="continent_id" value="<%= city.continent_id %>"/>
         <input type="hidden" id="country" type="text" name="country_id" value="<%= city.country_id %>"/>
@@ -20,5 +20,10 @@
     </form>
 <% end %>
 <% end %>
+<br>
+<div class="tech-slideshow">
+  <div class="mover-1"></div>
+  <div class="mover-2"></div>
+</div>
 </div>
 </div>

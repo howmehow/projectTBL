@@ -8,11 +8,11 @@
   <h2><%= city.name() %> </h2>in
     <%= city.country() %> -
       <%= city.continent.name() %>
-          <form action="/city/<%= city.id %>/delete" method="post">
-          <input class="button2" type="submit" value="Delete"/>
-          </form><form action="/city/<%= city.id %>/edit" method="get">
-          <input class="button2" type="submit" value="Edit"/>
-          </form>
+      <form action="/city/<%= city.id %>/edit" method="get">
+      <input class="button1" type="submit" value="Edit"/>
+      <form action="/city/<%= city.id %>/delete" method="post">
+      <input class="button1" type="submit" value="Delete"/>
+      </form>
       <% end %></li>
       <% end %><br>
 </ol>

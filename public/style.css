@@ -129,3 +129,45 @@ p {
 .button1:hover {
   background-color: #415B2A;
   color: white;}
+
+
+
+
+
+
+
+  .tech-slideshow {
+    height: 270px;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .tech-slideshow > div {
+    height: 270px;
+    width: 3000px;
+    background: url(multi.jpg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transform: translate3d(0, 0, 0);
+  }
+  .tech-slideshow .mover-1 {
+    animation: moveSlideshow 100s linear infinite;
+  }
+  .tech-slideshow .mover-2 {
+
+    animation: moveSlideshow 100s linear infinite;
+  }
+  .tech-slideshow:hover .mover-2 {
+    opacity: 1;
+  }
+
+  @keyframes moveSlideshow {
+    100% {
+      transform: translateX(-66.6666%);
+    }
+  }
