@@ -98,8 +98,8 @@ p {
   background-size: cover;
   position: relative;
 }
-.button {
-  background-color: #81BC4D; /* Green */
+.button2 {
+  background-color: #76A54C; /* Green */
   border: none;
   color: white;
   text-align: center;
@@ -112,7 +112,7 @@ p {
 }
 
 .button1 {
-  background-color: #81BC4D; /* Green */
+  background-color: #76A54C; /* Green */
   border: none;
   color: white;
   text-align: center;
@@ -123,3 +123,9 @@ p {
   cursor: pointer;
   padding: 5px 12px;
 }
+.button2:hover {
+  background-color: #415B2A;
+  color: white;}
+.button1:hover {
+  background-color: #415B2A;
+  color: white;}
