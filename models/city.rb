@@ -18,7 +18,7 @@ attr_accessor :name, :visited, :country_id, :continent_id
     ($1,$2,$3,$4) RETURNING id"
     values = [@name, @visited, @country_id, @continent_id]
     result = SqlRunner.run(sql,values)
-    @id = result.first["id"].to_i()
+    @id = result.first["id"].to_i
   end
 
   def update()
